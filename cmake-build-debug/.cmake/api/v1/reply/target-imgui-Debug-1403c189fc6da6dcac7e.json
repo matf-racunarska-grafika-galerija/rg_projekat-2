@@ -74,11 +74,11 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "/home/mirko/Desktop/rg_project/libs/imgui/include"
+					"path" : "/home/mirko/Desktop/grafika_projekat/rg_projekat/libs/imgui/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/mirko/Desktop/rg_project/libs/glad/include"
+					"path" : "/home/mirko/Desktop/grafika_projekat/rg_projekat/libs/glad/include"
 				}
 			],
 			"language" : "CXX",

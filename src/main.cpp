@@ -178,7 +178,7 @@ int main() {
     // configure global opengl state
     // -----------------------------
     glEnable(GL_DEPTH_TEST);
-    //proba
+    //blend
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
@@ -396,7 +396,6 @@ int main() {
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(lightCubeVertices), lightCubeVertices, GL_STATIC_DRAW);
-    // note that we update the lamp's position attribute's stride to reflect the updated buffer data
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
@@ -543,25 +542,13 @@ int main() {
         ourShader.setVec3("dirLight.diffuse", glm::vec3(programState->dirLightAmbDiffSpec.y));
         ourShader.setVec3("dirLight.specular", glm::vec3(programState->dirLightAmbDiffSpec.z));
 
-
-        // render the loaded models
-        //____________________________________________________________________________________________
-        //draw box
-//        glm::mat4 modelBox = glm::mat4(1.0f);
-//        model = glm::translate(modelBox,programState->vecCalibrate);
-//        model = glm::scale(modelBox, glm::vec3(programState->fineCalibrate));
-//        model = glm::rotate(modelBox,glm::radians(programState->vecRotate.x), glm::vec3(1.0f ,0.0f, 0.0f));
-//        model = glm::rotate(modelBox,glm::radians(programState->vecRotate.y), glm::vec3(0.0f ,1.0f, 0.0f));
-//        model = glm::rotate(modelBox,glm::radians(programState->vecRotate.z), glm::vec3(0.0f ,0.0f, 1.0f));
-//        ourShader.setMat4("model", modelBox);
-//        boxModel.Draw(ourShader);
-        //____________________________________________________________________________________________
-        //sveniski brod + glm::vec3(0.5*cos(currentTime)
+        //sveniski brod
         float currentTime = glfwGetTime();
         //faceculling
         glEnable(GL_CULL_FACE);
         glCullFace(GL_FRONT);
         glm::mat4 model = glm::mat4(1.0f);
+        // tried to make it revolve around the planet, but it doesn't look nice at all
         model = glm::translate(model,
                                programState->vecCalibrate+glm::vec3(sin(currentFrame*0.4)*0,0.0f,cos(currentFrame*0.4)*0)); // translate it down so it's at the center of the scene
         model = glm::scale(model, glm::vec3(0.1f));    // it's a bit too big for our scene, so scale it down
@@ -592,7 +579,7 @@ int main() {
 
         asteroidShader.setInt("texture_diffuse1", 0);
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, rockModel.textures_loaded[0].id); // note: we also made the textures_loaded vector public (instead of private) from the model class.
+        glBindTexture(GL_TEXTURE_2D, rockModel.textures_loaded[0].id);
         for (unsigned int i = 0; i < rockModel.meshes.size(); i++)
         {
             glBindVertexArray(rockModel.meshes[i].VAO);
@@ -601,7 +588,7 @@ int main() {
         }
 
 
-        //ligthCube
+        //ligthCube (couldn't think of something nicer than just a simple cube)
         lightCubeShader.use();
         lightCubeShader.setMat4("projection", projection);
         lightCubeShader.setMat4("view", view);
@@ -722,7 +709,7 @@ void processInput(GLFWwindow *window) {
         programState->camera.ProcessKeyboard(RIGHT, deltaTime);
 
 
-    // movment of the LightCube
+    // movement of the LightCube
     if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
         programState->lightPos.y += 0.09;
     if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)

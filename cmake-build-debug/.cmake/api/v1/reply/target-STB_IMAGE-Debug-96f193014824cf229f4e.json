@@ -62,11 +62,11 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/mirko/Desktop/rg_project/cmake-build-debug/configuration"
+					"path" : "/home/mirko/Desktop/grafika_projekat/rg_projekat/cmake-build-debug/configuration"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/mirko/Desktop/rg_project/include"
+					"path" : "/home/mirko/Desktop/grafika_projekat/rg_projekat/include"
 				}
 			],
 			"language" : "CXX",

@@ -85,14 +85,13 @@ void main()
     vec3 result = CalcDirLight(dirLight, normal, viewDir);
     result += CalcPointLight(pointLight, normal, FragPos, viewDir);
     vec4 texColor = texture(material.texture_diffuse1, TexCoords);
-    // ovde moram da poprevim nekako da napravim providnost stakla npr da nadjem staklo sliku
-    // i da je stavim da bude skrzo crvena i onda tako da filtriram sta ce da bude providno
+
     if(opacity)
        FragColor = vec4(result, 0.9f);
     else
         FragColor = vec4(result, 1.0f);
     float brightness = dot(FragColor.rgb, vec3(0.2126, 0.7152, 0.0722));
-    //TODO: izmestiti ovo 0.7 u promenjivu koju mogu da podesavam na razlicite vrednosti
+
         if(brightness > p)
             BrightColor = vec4(FragColor.rgb, 1.0);
         else

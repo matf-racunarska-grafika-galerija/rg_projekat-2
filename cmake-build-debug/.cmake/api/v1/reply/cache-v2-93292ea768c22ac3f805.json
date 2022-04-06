@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/mirko/Desktop/rg_project/cmake-build-debug"
+			"value" : "/home/mirko/Desktop/grafika_projekat/rg_projekat/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -603,7 +603,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/mirko/Desktop/rg_project"
+			"value" : "/home/mirko/Desktop/grafika_projekat/rg_projekat"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1323,7 +1323,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/mirko/Desktop/rg_project/cmake-build-debug"
+			"value" : "/home/mirko/Desktop/grafika_projekat/rg_projekat/cmake-build-debug"
 		},
 		{
 			"name" : "project_base_IS_TOP_LEVEL",
@@ -1347,7 +1347,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/mirko/Desktop/rg_project"
+			"value" : "/home/mirko/Desktop/grafika_projekat/rg_projekat"
 		}
 	],
 	"kind" : "cache",
