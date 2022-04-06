@@ -20,7 +20,7 @@ Iz `grupe A ` implementirane su oblasti:
 
 Iz `grupe B` implementirane su oblasti HDR i Bloom.
 
-Objekti su preveliki za github tako da se nalaze na google drivu (`https://drive.google.com/drive/folders/14irFH0Gx8OZzYxLtPDlxncScJ2kxMOPF?usp=sharing`).
+Objekti su preveliki za github tako da se nalaze na google drive-u (`https://drive.google.com/drive/folders/14irFH0Gx8OZzYxLtPDlxncScJ2kxMOPF?usp=sharing`).
 Preuzeti direktoirijum ubaciti u direktorijum resources.
 
 # Projekat (uputstva):
