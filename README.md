@@ -10,7 +10,7 @@ Prazan projekat sa pratećim bibliotekama koje koristimo na času.
 6. Šejderi idu u folder shaders. `Vertex shader` ima ekstenziju `.vs`, `fragment shader` ima ekstenziju `.fs`
 7. ALT+SHIFT+F10 -> project_base -> run
 
-#Projekat (sadrzaj):
+# Projekat (sadrzaj):
 U projektu su implementirane sve obavezne oblasti (Blending, Face culling, Advanced lighting).
 
 Iz `grupe A ` implementirane su oblasti:
@@ -23,7 +23,7 @@ Iz `grupe B` implementirane su oblasti HDR i Bloom.
 Objekti su preveliki za github tako da se nalaze na google drivu (`https://drive.google.com/drive/folders/14irFH0Gx8OZzYxLtPDlxncScJ2kxMOPF?usp=sharing`).
 Preuzeti direktoirijum ubaciti u direktorijum resources.
 
-#Projekat (uputstva):
+# Projekat (uputstva):
 - ImGui se prikazuje/sakriva pritiskom na dugme `F1`.
 - Pritiskom na dugme `M` se omogucava/onemogucava to da kamara prati pointer.
 - Kamera se pomera na dugmice `W`,`A`,`S`,`D`
